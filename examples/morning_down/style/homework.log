@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  9 MAY 2022 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  8 OCT 2022 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (./preambulo.tex
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
 \c@section=\count168
@@ -1579,8 +1579,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip100
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 105.
-Package hyperref Info: Option `linktocpage' set `true' on input line 105.
+Package hyperref Info: Option `colorlinks' set `true' on input line 106.
+Package hyperref Info: Option `linktocpage' set `true' on input line 106.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2019/11/15 version 4.22 text color boxes
 
@@ -1623,7 +1623,7 @@ Library (tcolorbox): 'tcbskins.code.tex' version '4.22'
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.22'
 ))
 
-Package array Warning: Column Y is already defined on input line 112.
+Package array Warning: Column Y is already defined on input line 113.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
@@ -1779,12 +1779,12 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1859,11 +1859,11 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 2.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 2.
+(Font)              <6> on input line 2.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1965,52 +1965,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 \openout2 = `main.aux'.
 
  (./main.tex
+Overfull \hbox (0.66524pt too wide) in paragraph at lines 7--34
+[]$[]$ $[]$ $[]$
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--34
 
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 66.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 66.
+)
 Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10'.
+(microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-[1
+ [1
 
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-00.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-<./img/6.pdf, id=55, 578.16pt x 433.62pt>
-File: ./img/6.pdf Graphic file (type pdf)
-<use ./img/6.pdf>
-Package pdftex.def Info: ./img/6.pdf  used on input line 124.
-(pdftex.def)             Requested size: 227.62206pt x 170.71231pt.
-<./img/7.pdf, id=56, 578.16pt x 433.62pt>
-File: ./img/7.pdf Graphic file (type pdf)
-<use ./img/7.pdf>
-Package pdftex.def Info: ./img/7.pdf  used on input line 130.
-(pdftex.def)             Requested size: 227.62206pt x 170.71231pt.
- [2 <./img/6.pdf> <./img/7.pdf
-
-pdfTeX warning: pdflatex (file ./img/7.pdf): PDF inclusion: multiple pdfs with 
-page group included in a single page
->]
-<./img/pi.pdf, id=109, 578.16pt x 433.62pt>
-File: ./img/pi.pdf Graphic file (type pdf)
-<use ./img/pi.pdf>
-Package pdftex.def Info: ./img/pi.pdf  used on input line 147.
-(pdftex.def)             Requested size: 318.66948pt x 239.0012pt.
-) [3 <./img/pi.pdf>]
 No file homework.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 5.
@@ -2018,44 +1989,31 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 5.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5.
 Package rerunfilecheck Info: File `homework.out' has not changed.
-(rerunfilecheck)             Checksum: EE3DC8C5900938328F754B64E90DD99C;276.
- ) 
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ )
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 36 ({)
+### semi simple group (level 1) entered at line 27 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 42830 strings out of 480608
- 830216 string characters out of 5903631
- 1310500 words of memory out of 5000000
- 57727 multiletter control sequences out of 15000+600000
- 592480 words of font info for 115 fonts, out of 8000000 for 9000
+ 42669 strings out of 480608
+ 827931 string characters out of 5903631
+ 1322236 words of memory out of 5000000
+ 57619 multiletter control sequences out of 15000+600000
+ 578252 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,85p,3292b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-dist/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx
-12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
-pe1/public/lm/lmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
-lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pf
-b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
-1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
-m/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on homework.pdf (3 pages, 430818 bytes).
+ 71i,11n,85p,3292b,33160s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.en
+c}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmri12.pfb>
+Output written on homework.pdf (1 page, 112596 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 25156 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 37 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 18445 words of extra memory for PDF output out of 20736 (max. 10000000)
 
