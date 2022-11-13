@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Homework Assignment Article
+% LaTeX Template
+% Version 1.3.5r (2018-02-16)
+%
+% This template has been done by
+% Victor Zimmermann (zimmermann@cl.uni-heidelberg.de)
+% and edited by:
+% Victoria Castor
+%
+% License:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt]{article} % Uses article class in A4 format
+
+%----------------------------------------------------------------------------------------
+%	FORMATTING
+%----------------------------------------------------------------------------------------
+
+%\setlength{\parskip}{0pt}
+%\setlength{\parindent}{0pt}
+%\setlength{\voffset}{-15pt}
+%\setlength{\parindent}{12pt}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage[a4paper, margin=2.5cm]{geometry} % Sets margin to 2.5cm for A4 Paper
+\usepackage[onehalfspacing]{setspace} % Sets Spacing to 1.5
+
+\usepackage[T1]{fontenc} % Use European encoding
+\usepackage[utf8]{inputenc} % Use UTF-8 encoding
+\usepackage{charter} % Use the Charter font
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} %, activeacute]{babel} % Language hyphenation and typographical rules
+
+\usepackage{amsthm, amsmath, amssymb} % Mathematical typesetting
+\usepackage{marvosym, wasysym} % More symbols
+\usepackage{float} % Improved interface for floating objects
+\usepackage[final, colorlinks = true, 
+            linkcolor = black, 
+            citecolor = black,
+            urlcolor = black]{hyperref} % For hyperlinks in the PDF
+%\usepackage[caption = false]{subfig}
+\usepackage{subcaption} %subcaptions
+\usepackage{graphicx, multicol} % Enhanced support for graphics
+\usepackage[usenames,dvipsnames]{xcolor} % Options for fancy tables
+\usepackage{rotating} % Rotation tools
+\usepackage{listings, style/lstlisting} % Environment for non-formatted code, !uses style file!
+\usepackage{pseudocode} % Environment for specifying algorithms in a natural way
+\usepackage{style/avm} % Environment for f-structures, !uses style file!
+\usepackage{booktabs} % Enhances quality of tables
+
+\usepackage{tikz-qtree} % Easy tree drawing tool
+\tikzset{every tree node/.style={align=center,anchor=north},
+         level distance=2cm} % Configuration for q-trees
+\usepackage{style/btree} % Configuration for b-trees and b+-trees, !uses style file!
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\arabic{section}.} % Arabic numerals for the sections
+\titleformat{\section}{\large}{\thesection}{1em}{}
+\renewcommand\thesubsection{\roman{subsection}.} % Roman numbering for subsections
+\titleformat{\subsection}{\large}{\thesubsection}{1em}{}
+\renewcommand\thesubsubsection{\alph{subsubsection})} % Alphabetic numerals for subsubsections
+\titleformat{\subsubsection}{\large}{\thesubsubsection}{1em}{}
+
+\usepackage[all]{nowidow} % Removes widows
+
+\usepackage{chemfig} % Molecule drawing
+\usepackage{multirow} % Multiples row in the same page
+\usepackage{wrapfig} % Allows figures or tables to have text wrapped around them
+\usepackage [ all ]{xy} % Diagrams for thermodinamics
+\usepackage{physics}
+\usepackage{breqn}
+
+%---- Fancy table
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\tcbuselibrary{skins}
+
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+
+\tcbset{tab1/.style={fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
+colback=yellow!10!white,colframe=red!75!black,colbacktitle=Salmon!40!white,
+coltitle=black,center title,freelance,frame code={
+\foreach \n in {north east,north west,south east,south west}
+{\path [fill=red!75!black] (interior.\n) circle (3mm); };},}}
+
+\tcbset{tab2/.style={enhanced,fonttitle=\bfseries,fontupper=\normalsize\sffamily,
+colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!40!white,
+coltitle=black,center title}}
+
+%---- Bibliography
+%\usepackage[backend=biber,style=numeric,
+%            sorting=nyt, natbib=true]{biblatex} % Complete reimplementation of bibliographic facilities
+%\addbibresource{main.bib}
+
+\usepackage[sort&compress]{natbib}
+%\usepackage[square,numbers]{natbib}
+%\bibliographystyle{abbrvnat}
+\bibliographystyle{unsrt}
+
+\usepackage{csquotes} % Context sensitive quotation facilities
+
+%---- Date and footers notes
+\usepackage[yyyymmdd]{datetime} % Uses YEAR-MONTH-DAY format for dates
+\renewcommand{\dateseparator}{-} % Sets dateseparator to '-'
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{}\renewcommand{\headrulewidth}{0pt} % Blank out the default header
+\fancyfoot[L]{\textsc{Madrid, Spain}} % Custom footer text
+\fancyfoot[C]{} % Custom footer text
+\fancyfoot[R]{\thepage} % Custom footer text
+
+\newcommand{\note}[1]{\marginpar{\scriptsize \textcolor{red}{#1}}} % Enables comments in red on margin
+\usepackage{lmodern} %texttt and textbf at the same time
+

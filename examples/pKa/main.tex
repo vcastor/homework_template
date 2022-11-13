@@ -1,0 +1,165 @@
+%----------------------------------------------------------------------------------------
+%	TITLE OF THE HOMEWORK	
+%----------------------------------------------------------------------------------------
+{\setlength{\parindent}{0pt}
+\title{Task2} % Article title
+\fancyhead[C]{}
+\begin{minipage}{0.295\textwidth} % Left side of title section
+\raggedright
+MQT II\\ % Your lecture or course
+\footnotesize % Authors text size
+%\hfill\\ % Uncomment if right minipage has more lines
+Victoria Castor Villegas % Your name, your matriculation number
+\medskip\hrule
+\end{minipage}
+\begin{minipage}{0.4\textwidth} % Center of title section
+\centering 
+\large % Title text size
+pKa determination\\ % Assignment title and number
+\normalsize % Subtitle text size
+Task 2\\ % Assignment subtitle
+\end{minipage}
+\begin{minipage}{0.295\textwidth} % Right side of title section
+\raggedleft
+\today\\ % Date
+\footnotesize % Email text size
+%\hfill\\ % Uncomment if left minipage has more lines
+victoria.castor@estudiante.uam.es% Your email
+\medskip\hrule
+\end{minipage}
+}
+%----------------------------------------------------------------------------------------
+%	HOMEWORK CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Introduction}}
+
+In this work about the pKa determination using continuum solvation
+models, we compute the expected value from theoretical point of view
+for pKa of 6,7-dihydroxycoumarin-3-carboxylic acid.
+To understand how compute this value, we just need know about how
+the $K_a$ is related with the Gibbs free energy, that since we are
+modeling the aqueous reaction as a contributions in a gas phase, as
+is written down in the next Equation.
+
+%\xymatrix@C=1cm{
+%\xymatrix{
+\centerline{\xymatrix@C0.6cm{
+AH_{(g)}  \ar[r]^{\Delta G_{g}} & A^-_{(g)} \ar[d]^{\Delta G_{solv,A^-}}    & + & H^+_{(g)} \ar[d]^{\Delta G_{solv,H^+}}\\
+AH_{(aq)} \ar[u]^{-\Delta G_{solv,AH}} \ar[r]^{\Delta G_{aq}} & A^-_{(aq)} & + & H^+_{(aq)}
+}}
+
+Therefore, if we have the values for $\Delta G$'s we can compute easily
+and estimate pKa value. From Quantum Chemistry we take the models
+about solvation, particularly SMD model. That to have the corresponded
+numerical values to compute pKa, just following the simplest equations
+taken from the pKa and $K_a$ definitions, also how the $\Delta G$ is
+related with the reactions.
+
+\begin{align}
+\mathrm{pKa} = -logK_a = \frac{\Delta G\mathrm{_{aq}}}{\mathrm{RT}ln(10)}, \ with: \
+K_a = \frac{[A^-_{aq}][H^+_{aq}]}{[AH_{aq}]}
+\end{align}
+
+\begin{align}
+\Delta G\mathrm{_{aq}} &= \Delta G\mathrm{_{gas}} +
+\Delta\Delta G\mathrm{_{solv}} \\\nonumber
+\Delta G\mathrm{_{gas}} &= G\mathrm{^{\circ}_{gas,A^-}} +
+G\mathrm{^{\circ}_{gas,H^+}} - G\mathrm{^{\circ}_{gas,AH}} \\\nonumber
+\Delta\Delta G\mathrm{_{solv}} &= \Delta G\mathrm{_{solv,A^-}} +
+\Delta G\mathrm{_{solv, H^+}} - \Delta G\mathrm{_{solv, AH}}
+\end{align}
+
+Also, as we said, we are computing these from Solvation Model Based on
+Density (SMD). Published in 2009, \cite{Marenich2009}; SMD directly calculates
+the solvation free energy of an ideal solvation process that occurs at fixed
+concentration. That with fixing the concentration free energy of solvation into
+two components. The first component is the bulk-electrostatic contribution
+arising from a self-consistent reaction field (SCRF) treatment; the second one,
+arising from short-range interactions between the solute and solvent molecules
+in the first solvation shell.
+
+
+\section{\textbf{Computational Details}}
+
+We optimized the structures for both states of our molecule (proton and
+deprotonated) with
+B3LYP/6-31G(d)~\cite{Becke1993,Lee1988,Vosko1980,Stephens1994,Ditchfield1971}
+approximation, with SMD \cite{Marenich2009}. Later on, a single point
+calculation with the same theory level in gas phase. All these calculations
+were carried out using the package {\sc{Gaussian16}}~\cite{g16}.
+
+The starting guessed geometry for the molecule was taken from Moodle Platform. With the
+help of {\sc{GaussView}}~\cite{g16} and \texttt{vi} editor we made the input
+files.
+
+Later on, we get the values from the {\sc{Gaussian16}} outputs with an simple
+\texttt{grep} command, looking for the strings: \texttt{SCF Done}, and
+\texttt{Gibbs Free}. Where the last value for \texttt{SCF Done} is from
+the gas phase and the value before is for the solvation case. That
+since we computed both cases from the same input file, extending
+that with \texttt{--Link1--} reserved word.
+
+\section{\textbf{Results}}
+
+After the computing time (less than 4 hours with an i5 2015 processor), we had the
+next values:
+
+\begin{tcolorbox}[tab2,tabularx={X|Y|Y|Y},title=Numerical Values (a.u.), boxrule=0.5pt]
+ & Equation & AH & A$^-$ \\\hline\hline
+$E\mathrm{_{sol}}$  & $\langle\psi_{\mathrm{sol}} |\hat{H}^{\circ} + \frac12V_{\mathrm{sol}} |
+\psi_{\mathrm{sol}}\rangle + \Delta G\mathrm{_{non-ele}}$ & -836.061420211
+& -835.586374975 \\\hline
+$E\mathrm{_{vac}}$ & $\langle\psi_0 |\hat{H}^{\circ} |\psi_0 \rangle$ & -836.031409140 & -836.031409140 \\\hline
+$G\mathrm{_{corr}}$ &  & 0.110238 & 0.096639 \\
+\end{tcolorbox}
+
+Therefore, we can compute the value for the Gibbs free energy of solvation as:
+
+\begin{align}
+\Delta G_{\mathrm{solv}} = E_{\mathrm{sol}} - E_{\mathrm{vac}} &=
+\left< \psi_{\mathrm{sol}} \left| \hat{H}^{\circ} + \frac12V_{\mathrm{sol}} \right| \psi_{\mathrm{sol}} \right> -
+\langle \psi_0 | \hat{H}^{\circ}| \psi_0 \rangle
++ \Delta G_{\mathrm{non-ele}} \\
+&= \Delta G_{\mathrm{ele}} + \Delta G_{\mathrm{non-ele}}\nonumber
+\end{align}
+
+\noindent Eventually, compute the Gibbs energy in solution from DFT calculation in
+water,
+
+\begin{align}
+G_{\mathrm{sol}} = E_{\mathrm{vac}} + G_{\mathrm{corr}} + \Delta G_{\mathrm{solv}} =
+G_{\mathrm{vac}} + \Delta G_{\mathrm{solv}}
+\end{align}
+
+Then, using all the equations written down before, we can compute the value
+for $\Delta G_{\mathrm{(aq)}}$ as:
+
+\begin{align}
+\Delta G_{(aq)} =& G\mathrm{^{\circ}_{gas,A^-}} +
+G\mathrm{^{\circ}_{gas,H^+}} - G\mathrm{^{\circ}_{gas,AH}} +
+\Delta G\mathrm{_{solv,A^-}} +
+\Delta G\mathrm{_{solv, H^+}} - \Delta G\mathrm{_{solv, AH}}\\\nonumber
+=& E_{\mathrm{DFT,A^-}} + G_{\mathrm{corr,A^-}} + G^{\circ}_{\mathrm{gas,H^+}} - (E_{\mathrm{DFT,AH}} + G_{\mathrm{DFT,AH}}) + \\\nonumber
+&E_{\mathrm{sol,A^-}}-E_{\mathrm{vac,A^-}} + \Delta G_{\mathrm{solv,H^+}} - (E_{\mathrm{sol,AH}}-E_{\mathrm{vac,AH}})
+\end{align}
+
+Therefore, not forgetting to convert to solution 1 M standard state by adding 1.89
+kcal/mol to G$^{\circ}$, we can aim that, in these level of theory, the expected value for the
+molecule $\Delta G_{(aq)}$ and the pKa at 298.15 K is:
+
+\begin{align}
+\Delta G_{(aq)} &= 297.25 +(-265.01) - (-18.83)
+-524549.07 +(-6.28) -(-524540.53) \,\mathrm{kcal/mol}\\
+&= 80.62\, \mathrm{kJ/mol} \\\nonumber
+\mathrm{pKa} &= 14
+\end{align}
+
+\section{\textbf{Molecule}}
+
+The deprotonation of 6,7-dihydroxycoumarin-3-carboxylic acid:
+
+\schemestart
+\chemfig{*6((-HO)=-*6(-O-(=O)-(-(=[2]O)-[:-30]O^\ominus)=--)=-=(-HO)-)} \+
+\chemfig{H^\oplus}
+\schemestop

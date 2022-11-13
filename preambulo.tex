@@ -56,6 +56,14 @@
 %---- NEW packages 
 %----------------------------------------------------------------------------------------
 
+\usepackage{etoolbox} % We first call it to not break csquotes package
+%\newrobustcmd*{\RemoveFromAfterEndEnvironment}[2]{%
+%  \expandafter\patchcmd\csname @afterend@#1@hook\endcsname{#2}{}%
+%}
+%\AfterEndEnvironment{itemize}{bleat bleat\par}{}{}
+%\AfterEndEnvironment{itemize}{don't remove this\par}{}{}
+%
+%\usepackage{transparent}
 \usepackage{chemfig} % Molecule drawing
 \usepackage{multirow} % Multiples row in the same page
 \usepackage{wrapfig} % Allows figures or tables to have text wrapped around them
@@ -69,7 +77,7 @@
 \usepackage{longtable} %
 \usepackage{epsfig}
 \usepackage{braket} % Dirac notation
-\usepackage{ctable} % Extra configurations for tables
+%\usepackage{ctable} % Extra configurations for tables
 \usepackage{wrapfig} % Figures to the right or left 
 \usepackage{siunitx} % Units, Never imperial, we're not USA
 \sisetup{
@@ -106,8 +114,8 @@ group-minimum-digits = 4
 }
 %---- Fancy table
 \usepackage{tcolorbox}
-\usepackage{tabularx}
-\usepackage{array}
+\usepackage{tabularx} % ctable alraedy called it
+\usepackage{array} % already loaded since we use ctable
 \usepackage{colortbl}
 \tcbuselibrary{skins}
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
@@ -136,8 +144,8 @@ coltitle=black,center title}}
 \pagestyle{fancy} % All pages have headers and footers
 \fancyhead{}\renewcommand{\headrulewidth}{0pt} % Blank out the default header
 \fancyfoot[L]{\textsc{Ciudad de México, Estados Unidos Mexicanos}} % Custom footer text
-%\fancyfoot[L]{\textsc{Madrid, Reino de España}} % for example, where you are writting
-%\fancyfoot[L]{\textsc{Paris, République française}} % or to where will be send the text
+%\fancyfoot[L]{\textsc{Madrid, Reino de España}}                   % for example, where you are writting
+%\fancyfoot[L]{\textsc{Paris, République française}}               % or to where will be send the text
 \fancyfoot[C]{} % Custom footer text
 \fancyfoot[R]{\thepage} % Custom footer text
 \newcommand{\note}[1]{\marginpar{\scriptsize \textcolor{red}{#1}}} % Enables comments in red on margin
@@ -145,7 +153,7 @@ coltitle=black,center title}}
 
 %----------------------------------------------------------------------------------------
 %---- Julia programming language isn't deffined by defult
-%% Julia definition (c) 2014 Jubobs
+%                                                      % Julia definition (c) 2014 Jubobs
 \lstdefinelanguage{Julia}%
   {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
       end,export,false,for,function,immutable,import,importall,if,in,%
